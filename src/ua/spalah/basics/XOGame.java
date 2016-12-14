@@ -1,21 +1,38 @@
 package ua.spalah.basics;
 
+import java.util.DoubleSummaryStatistics;
+import java.util.Scanner;
+
 /**
  * Created by dmitry.dev on 14.12.2016.
  */
 public class XOGame {
 
-    private static int turn=0;
-    static String[][]  GameDesc = {
-            {"o","x","x"},
-            {"o","x","x"},
-            {"o","x","x"}
-    };
-    String FirstPlayer ="";  //x
-    String SecondPlayer =""; //o
 
     public static void main(String[] args) {
+
+        XOGame xog = new XOGame();
+
         DrawDesc(GameDesc);
+
+    }
+
+    private Scanner scanner = new Scanner(System.in);
+    private int turn=0;
+    private static String[][]  GameDesc = {
+            {"-","-","-"},
+            {"-","-","-"},
+            {"-","-","-"}
+    };
+    private String FirstPlayer ="";  //x
+    private String SecondPlayer =""; //o
+
+    public void XOGame() {
+
+        System.out.println("First Player name? X");
+        FirstPlayer=scanner.nextLine();
+        System.out.println("Second Player name? O");
+        SecondPlayer=scanner.nextLine();
     }
     public boolean CheckLine(String check)
     {
