@@ -34,7 +34,7 @@ public class Calc {
                 result = Calc(fVal,sVal,action);
                 System.out.println(String.format("Result = %.3f",result));
             }
-            else
+            else if(!UserLine.equals("exit"))
             {
                 System.out.println("What are you want from me?");
             }

@@ -7,7 +7,7 @@ package ua.spalah.basics;
     public class ArraysHomework {
 
         public static void main(String[] args) {
-            int arr[] = {1,3,5,6,-7,4,333,-52,11,1};
+            int arr[] = {1,3,5,6,-7,4,0,333,-52,11,1};
             System.out.println(min(arr, true));
             System.out.println(max(arr, true));
             System.out.println(min(arr, false));
@@ -31,7 +31,14 @@ package ua.spalah.basics;
             }
             else
             {
-                return 0;
+                int result = array[0];
+                for (int i = 0; i <array.length ; i++) {
+                    if(array[i]>result)
+                    {
+                        result = array[i];
+                    }
+                }
+                return result;
             }
         }
 
@@ -51,7 +58,14 @@ package ua.spalah.basics;
             }
             else
             {
-                return 0;
+                int result = array[0];
+                for (int i = 0; i <array.length ; i++) {
+                    if(array[i]<result)
+                    {
+                        result = array[i];
+                    }
+                }
+                return result;
             }
         }
 
