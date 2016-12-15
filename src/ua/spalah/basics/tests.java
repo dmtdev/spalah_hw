@@ -5,6 +5,9 @@ import java.text.DecimalFormat;
 /**
  * Created by dmitry.dev on 15.12.2016.
  */
+/**
+ * test
+ */
 public class tests {
     public static void main(String[] args) {
         double r = 256.245/5.256487542;
