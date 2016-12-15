@@ -36,7 +36,7 @@ public class XOGame {
             SecondPlayer=scanner.nextLine();
             DrawDesc(GameDesc);
             do {
-                System.out.println("Enter coords "+(turn%2==0?"X":"O")+", 1x2");
+                System.out.println("Enter coordinates for "+(turn%2==0?"X":"O")+", 1x2");
                 String position = scanner.nextLine();
                 if(!CheckRegexp(position,"^[1-3]{1}+x+[1-3]{1}$"))
                 {
@@ -62,7 +62,7 @@ public class XOGame {
                     }
                     else
                     {
-                        System.out.println("Field not empty, another coords");
+                        System.out.println("Field not empty, another coordinates");
                     }
                     DrawDesc(GameDesc);
                 }
@@ -71,23 +71,22 @@ public class XOGame {
 
             for (String line: lines)
             {
-                if (line.equals("XXX"))
-                {
-                    System.out.println("Winner: "+FirstPlayer);
-                    winner = true;
-                    break;
+                if(line!=null) {
+                    if (line.equals("XXX")) {
+                        System.out.println("Winner: " + FirstPlayer);
+                        winner = true;
+                        break;
 
-                }
-                else if(line.equals("OOO"))
-                {
-                    System.out.println("Winner: "+SecondPlayer);
-                    winner = true;
-                    break;
+                    } else if (line.equals("OOO")) {
+                        System.out.println("Winner: " + SecondPlayer);
+                        winner = true;
+                        break;
+                    }
                 }
             }
             if(!winner)
             {
-                System.out.println("No winner in this game...");
+                System.out.println("There are no winners in this game...");
             }
         }
         private static boolean CheckLine(String[][] check)
