@@ -27,8 +27,14 @@ public class XOGame {
         };
         private static String[] lines = new String[8];
         private static boolean winner = false;
-
-        public static void XOGameStart() {
+    /**
+     *
+     */
+    /**
+     *
+     *
+     */
+    public static void XOGameStart() {
 
             System.out.println("First Player name? X");
             FirstPlayer=scanner.nextLine();
