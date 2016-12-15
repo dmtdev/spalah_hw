@@ -25,6 +25,7 @@ public class XOGame {
                     {"-","-","-"},
                     {"-","-","-"}
         };
+        //123
         private static String[] lines = new String[8];
         private static boolean winner = false;
      public static void XOGameStart() {
