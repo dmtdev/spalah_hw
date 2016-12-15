@@ -10,12 +10,11 @@ public class XOGame {
 
     public static void main(String[] args) {
 
-        XOGameStart.XOGameStart();
-        XOGameStart.DrawDesc(XOGameStart.GameDesc);
+        XOGameStart();
+        DrawDesc(GameDesc);
 
     }
-    public static class XOGameStart
-    {
+
         private static Scanner scanner = new Scanner(System.in);
         private static int turn=0;
         private static String[][]  GameDesc = {
@@ -48,7 +47,7 @@ public class XOGame {
 
             }
         }
-    }
+
 
 
 }
