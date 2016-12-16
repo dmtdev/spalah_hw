@@ -1,5 +1,6 @@
 package ua.spalah.basics;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -27,7 +28,7 @@ public class XOGame {
         };
         //123
         private static String[] lines = new String[8];
-        private static boolean winner = false;
+        //private static boolean winner = false;
      public static void XOGameStart() {
 
             System.out.println("First Player name? X");
@@ -69,22 +70,33 @@ public class XOGame {
             }
             while(!CheckLine(GameDesc) && turn<9);
 
-            for (String line: lines)
+//            for (String line: lines)
+//            {
+//                if(line!=null) {
+//                    if (line.equals("XXX")) {
+//                        System.out.println("Winner: " + FirstPlayer);
+//                        winner = true;
+//                        break;
+//
+//                    } else if (line.equals("OOO")) {
+//                        System.out.println("Winner: " + SecondPlayer);
+//                        winner = true;
+//                        break;
+//                    }
+//                }
+//            }
+            if(Arrays.asList(lines).contains("XXX"))
             {
-                if(line!=null) {
-                    if (line.equals("XXX")) {
-                        System.out.println("Winner: " + FirstPlayer);
-                        winner = true;
-                        break;
-
-                    } else if (line.equals("OOO")) {
-                        System.out.println("Winner: " + SecondPlayer);
-                        winner = true;
-                        break;
-                    }
-                }
+                System.out.println("Winner: " + FirstPlayer);
+                //winner = true;
             }
-            if(!winner)
+            else if(Arrays.asList(lines).contains("OOO"))
+            {
+                System.out.println("Winner: " + SecondPlayer);
+                //winner = true;
+            }
+            //if(!winner)
+            else
             {
                 System.out.println("There are no winners in this game...");
             }
@@ -101,14 +113,18 @@ public class XOGame {
             }
             lines[6]=String.join("",new String[]{check[0][0], check[1][1], check[2][2]});
             lines[7]=String.join("",new String[]{check[2][0], check[1][1], check[0][2]});
-            for (String line: lines)
+//            for (String line: lines)
+//            {
+//                if(line != null) {
+//
+//                    if (line.equals("XXX") || line.equals("OOO")) {
+//                        return true;
+//                    }
+//                }
+//            }
+            if(Arrays.asList(lines).contains("XXX") || Arrays.asList(lines).contains("OOO"))
             {
-                if(line != null) {
-
-                    if (line.equals("XXX") || line.equals("OOO")) {
-                        return true;
-                    }
-                }
+                return true;
             }
             return false;
         }
