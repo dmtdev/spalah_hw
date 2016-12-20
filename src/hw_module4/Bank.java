@@ -11,9 +11,9 @@ public class Bank {
 
     public static void main(String[] args) {
         Bank bank = new Bank("someBank");
-        bank.addDeposit(new Deposit("firstClient", 100, 10));
-        bank.addDeposit(new Deposit("secondClient", 200, 7));
-        bank.addDeposit(new Deposit("thirdClient", 300, 15.5));
+        bank.addDeposit(new Deposit("First Client", 100, 10));
+        bank.addDeposit(new Deposit("Second Client", 200, 7));
+        bank.addDeposit(new Deposit("Third Client", 300, 15.5));
         Scanner scanner = new Scanner(System.in);
         System.out.println("Years count?");
         int years = 0;
