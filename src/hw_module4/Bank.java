@@ -24,8 +24,7 @@ public class Bank {
                 System.out.println("Integer please..");
             }
         }
-        //;
-        System.out.printf("Sum for " + years + " years: $%.2f", bank.calcSum(years));
+        System.out.printf("Amount over " + years + " years: $%.2f", bank.calcSum(years));
     }
 
     private static int countDeposits = 0;
