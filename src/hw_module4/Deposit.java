@@ -13,12 +13,12 @@ public class Deposit {
         this.firstSum = firstSum;
         this.percent = percent;
     }
-    public double calcProfit(int years)
-    {
+
+    public double calcProfit(int years) {
         double profit = this.firstSum;
-        for (int i = 0; i <years ; i++) {
-            profit = profit+(profit/100*this.percent);
+        for (int i = 0; i < years; i++) {
+            profit = profit + (profit / 100 * this.percent);
         }
-        return profit-this.firstSum;
+        return profit - this.firstSum;
     }
 }
