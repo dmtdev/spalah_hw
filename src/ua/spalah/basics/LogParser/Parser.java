@@ -38,7 +38,7 @@ public class Parser {
         }
         for (Entry entry : logEntries){
             if(!entry.isNull()) {
-                //System.out.println(entry);
+                System.out.println(entry);
             }
         }
     }
