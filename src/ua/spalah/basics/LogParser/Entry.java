@@ -48,6 +48,13 @@ class Entry
             return false;
         }
     }
+    public void showSelected(String select)
+    {
+        if(this.warnLevel.equals(select)) {
+            System.out.println(this.toString());
+        }
+
+    }
     // TODO: 20.12.2016 Think about:
     // TODO: 20.12.2016 Add writeToDb ? 
     // TODO: 20.12.2016 Add warnLevelOutput ?

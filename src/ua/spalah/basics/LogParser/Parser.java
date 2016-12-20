@@ -32,13 +32,15 @@ public class Parser {
                     logEntries.add(new Entry());
                 }
                 catch (Exception e){
-                    System.out.println(String.join(" ",line));
+                    //System.out.println(String.join(" ",line));
                 }
             }
         }
         for (Entry entry : logEntries){
             if(!entry.isNull()) {
-                System.out.println(entry);
+               //entry.showSelected("WARNING:");
+               //entry.showSelected("ERROR:");
+               System.out.println(entry);
             }
         }
     }
