@@ -3,12 +3,12 @@ package hw_module4;
 /**
  * Created by dd on 20.12.2016.
  */
-public class Deposit {
+public class Deposit1 {
     private String clientName;
     private double firstSum;
     private double percent;
 
-    public Deposit(String clientName, double firstSum, double percent) {
+    public Deposit1(String clientName, double firstSum, double percent) {
         this.clientName = clientName;
         this.firstSum = firstSum;
         this.percent = percent;
