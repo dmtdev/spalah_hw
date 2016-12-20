@@ -13,14 +13,14 @@ public class RacoonEntry extends Entry {
         logEntry[0]="";
         String[] time = logEntry[1].split(":");
         logEntry[1]="";
-        warnLevel = logEntry[2];
+        this.setWarnLevel(logEntry[2]); ;
         logEntry[2]="";
-        warnMessage = String.join(" ",logEntry).trim();
+        this.setWarnMessage(String.join(" ",logEntry).trim());
         GregorianCalendar calendar = new GregorianCalendar();
 
         calendar.set(
                 Integer.parseInt(data[0]),Integer.parseInt(data[1]),Integer.parseInt(data[2]),Integer.parseInt(time[0]),Integer.parseInt(time[1]),Integer.parseInt(time[2])
         );
-        datetime = calendar.getTime();
+        this.setDatetime(calendar.getTime());
     }
 }

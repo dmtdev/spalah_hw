@@ -7,9 +7,9 @@ import java.util.*;
  */
 class Entry
 {
-    protected Date datetime;
-    protected String warnLevel;
-    protected String warnMessage;
+    private Date datetime;
+    private String warnLevel;
+    private String warnMessage;
 
     public Entry() {
         this.datetime = null;
@@ -30,6 +30,15 @@ class Entry
     public String getWarnMessage(){
         return warnMessage;
     }
+    public void setDatetime(Date date) {
+        this.datetime = date;
+    }
+    public void setWarnLevel(String warnLevel){
+        this.warnLevel=warnLevel;
+    }
+    public void setWarnMessage(String warnMessage){
+        this.warnMessage=warnMessage;
+    }
     @Override
     public String toString()
     {
@@ -39,8 +48,7 @@ class Entry
         return result;
     }
 
-    public boolean isNull()
-    {
+    public boolean isNull(){
         if (this.datetime==null || this.warnLevel==null || this.warnMessage==null){
             return true;
         }
@@ -48,12 +56,10 @@ class Entry
             return false;
         }
     }
-    public void showSelected(String select)
-    {
+    public void showSelected(String select){
         if(this.warnLevel.equals(select)) {
             System.out.println(this.toString());
         }
-
     }
     // TODO: 20.12.2016 Think about:
     // TODO: 20.12.2016 Add writeToDb ? 
