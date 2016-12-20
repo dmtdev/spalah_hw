@@ -5,9 +5,11 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 /**
  * Created by dmitry.dev on 14.12.2016.
  */
+
 public class XOGame {
 
     //private static boolean winner;
@@ -122,6 +124,7 @@ public class XOGame {
 //                    }
 //                }
 //            }
+
             if(Arrays.asList(lines).contains("XXX") || Arrays.asList(lines).contains("OOO"))
             {
                 return true;
