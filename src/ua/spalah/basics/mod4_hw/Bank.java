@@ -18,7 +18,7 @@ public class Bank {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Years count?");
         int years = 0;
-        while (years == 0) {
+        while (years < 1) {
             try {
                 years = Integer.parseInt(scanner.nextLine());
             } catch (Exception e) {
