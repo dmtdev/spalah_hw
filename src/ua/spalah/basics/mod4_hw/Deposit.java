@@ -15,11 +15,11 @@ public class Deposit {
     }
 
     public double calcProfit(int years) {
-        double profit = this.firstSum;
+        double profit = firstSum;
         for (int i = 0; i < years; i++) {
             profit = profit + (profit / 100 * this.percent);
         }
-        return profit - this.firstSum;
+        return profit - firstSum;
     }
 }
 
